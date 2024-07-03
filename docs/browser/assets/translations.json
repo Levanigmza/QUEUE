@@ -1,0 +1,24 @@
+{
+    "geo": {
+      "welcomeMessage": "მოგესალმებით",
+      "selectServiceMessage": "გთხოვთ აირჩიოთ სერვისი",
+      "service1Label": "სერვისი 1",
+      "service2Label": "სერვისი 2",
+      "service3Label": "სერვისი 3"
+    },
+    "eng": {
+      "welcomeMessage": "Welcome",
+      "selectServiceMessage": "Please select a service",
+      "service1Label": "Service 1",
+      "service2Label": "Service 2",
+      "service3Label": "Service 3"
+    },
+    "rus": {
+      "welcomeMessage": "Добро пожаловать",
+      "selectServiceMessage": "Выберите сервис",
+      "service1Label": "Сервис 1",
+      "service2Label": "Сервис 2",
+      "service3Label": "Сервис 3"
+    }
+}
+  
