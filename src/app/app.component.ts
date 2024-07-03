@@ -32,6 +32,7 @@ this.requestFullScreen();
     } else if (el.msRequestFullscreen) { /* IE/Edge */
       el.msRequestFullscreen();
     }
+    document.body.style.backgroundColor = 'white'; 
   }
 
   Loader: boolean = false;
