@@ -76,14 +76,14 @@ hr {
 .service-buttons button {
     font-family: 'FiraGO';
 
-    padding: 40px 150px;
+    padding: 60px 180px;
     font-size: 18px;
     margin: 5px;
     cursor: pointer;
     background-color: #053354;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .loader {

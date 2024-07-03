@@ -35,7 +35,7 @@ export class AppComponent {
 
 
   loadTranslations(lang: string) {
-    this.http.get('/assets/translations.json').subscribe(
+    this.http.get('assets/translations.json').subscribe(
       (translations: any) => {
         this.currentTranslations = translations[lang];
       },
