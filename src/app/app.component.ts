@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
@@ -6,8 +6,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HttpClientModule],
-  providers: [HttpClient,],
+  imports: [RouterOutlet, CommonModule, HttpClientModule , ],
+  providers: [HttpClient ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,10 +15,25 @@ export class AppComponent {
   title = 'testapp';
   currentTranslations: any = {};
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient , private elementRef : ElementRef) {
     this.loadTranslations('geo');
-
+this.requestFullScreen();
   }
+
+  requestFullScreen() {
+    const el = this.elementRef.nativeElement;
+
+    if (el.requestFullscreen) {
+      el.requestFullscreen();
+    } else if (el.mozRequestFullScreen) { /* Firefox */
+      el.mozRequestFullScreen();
+    } else if (el.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      el.webkitRequestFullscreen();
+    } else if (el.msRequestFullscreen) { /* IE/Edge */
+      el.msRequestFullscreen();
+    }
+  }
+
   Loader: boolean = false;
 
   changeLanguage(language: string) {
