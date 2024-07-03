@@ -32,6 +32,7 @@ export class AppComponent {
       this.Loader = false;
     }, 2000);
   }
+  
 
   loadTranslations(lang: string) {
     this.http.get('/assets/translations.json').subscribe(
