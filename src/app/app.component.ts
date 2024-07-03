@@ -6,8 +6,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet  , CommonModule , HttpClientModule],
-  providers:[HttpClient , ],
+  imports: [RouterOutlet, CommonModule, HttpClientModule],
+  providers: [HttpClient,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'testapp';
   currentTranslations: any = {};
 
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient) {
     this.loadTranslations('geo');
 
   }
@@ -32,7 +32,7 @@ export class AppComponent {
       this.Loader = false;
     }, 2000);
   }
-  
+
 
   loadTranslations(lang: string) {
     this.http.get('/assets/translations.json').subscribe(
